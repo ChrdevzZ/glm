@@ -52,6 +52,31 @@ GLM_FUNC_QUALIFIER glm_f32vec4 glm_vec4_div_lowp(glm_f32vec4 a, glm_f32vec4 b)
 	return glm_vec4_mul(a, _mm_rcp_ps(b));
 }
 
+GLM_FUNC_QUALIFIER glm_f32vec4 glm_vec1_rcp_lowp(glm_f32vec4 a)
+{
+    //
+    // Compute the approximate reciprocal of the lower single-precision (32-bit) floating-point
+    // element in a, store the result in the lower element of dst, and copy the upper 3 packed
+    // elements from a to the upper elements of dst. The maximum relative error for this approximation
+    // is less than 1.5*2^-12.
+    // 
+    // Flag: SSE
+    //
+    return _mm_rcp_ss(a);
+}
+
+GLM_FUNC_QUALIFIER glm_f32vec4 glm_vec4_rcp_lowp(glm_f32vec4 a)
+{
+    //
+    // Compute the approximate reciprocal of packed single-precision (32-bit) floating-point
+    // elements in a, and store the results in dst. The maximum relative error for this
+    // approximation is less than 1.5*2^-12.
+    // 
+    // Flag: SSE
+    //
+    return _mm_rcp_ps(a);
+}
+
 GLM_FUNC_QUALIFIER glm_f32vec4 glm_vec4_swizzle_xyzw(glm_f32vec4 a)
 {
 #	if GLM_ARCH & GLM_ARCH_AVX2_BIT

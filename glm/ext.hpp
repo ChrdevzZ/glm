@@ -265,3 +265,6 @@
 #	include "./gtx/range.hpp"
 #endif
 #endif//GLM_ENABLE_EXPERIMENTAL
+
+#include "./ext2/float_bits_cast.hpp"
+#include "./ext2/navie_reciprocal.hpp"

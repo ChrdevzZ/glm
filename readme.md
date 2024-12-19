@@ -41,13 +41,11 @@ glm::mat4 camera(float Translate, glm::vec2 const& Rotate)
 }
 ```
 
-## [Latest release](https://github.com/g-truc/glm/releases/latest)
+## Latest release
 
-## Project Health
+- From [icaven/glm](https://github.com/g-truc/glm/releases/latest).
+- From [icaven/glm](https://github.com/icaven/glm/releases/latest).
 
-| Service | Status |
-| ------- | ------ |
-| [GitHub actions](https://github.com/g-truc/glm/actions)| [![.github/workflows/ci.yml](https://github.com/g-truc/glm/actions/workflows/ci.yml/badge.svg)](https://github.com/g-truc/glm/actions/workflows/ci.yml)
 
 ## Build and Install
 
@@ -103,9 +101,17 @@ FetchContent_MakeAvailable(glm)
 target_link_libraries(main PRIVATE glm::glm)
 ```
 
+## Additional extension in [this repository](https://github.com/ChrdevzZ/glm)
+
+- Additional extensions with the prefix name *GLM_EXT2_*. The added header files for the additional extensions are set into the glm/ext2/ directory. Note that <glm/ext.hpp> includes all of these additional extensions, and there is no need to define any more macros when including and using them.
+
 ## Release notes
 
-### [GLM 1.0.2](https://github.com/g-truc/glm/tree/master) - 2024-0X-XX
+### [GLM 1.0.2](https://github.com/ChrdevzZ/glm/tree/master) - 2024-XX-XX
+
+#### Features:
+- Added *GLM_EXT2_navie_reciprocal* with tests
+- Added *GLM_EXT2_float_bits_cast* with tests
 
 #### Improvements:
 - Unit tests are not build by default, `GLM_BUILD_TESTS` set to `ON` required.
