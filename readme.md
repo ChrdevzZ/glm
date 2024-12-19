@@ -41,11 +41,9 @@ glm::mat4 camera(float Translate, glm::vec2 const& Rotate)
 }
 ```
 
-## Latest release
+## Release
 
-- From [icaven/glm](https://github.com/g-truc/glm/releases/latest).
-- From [icaven/glm](https://github.com/icaven/glm/releases/latest).
-
+- From [g-truc/glm](https://github.com/g-truc/glm/releases/latest).
 
 ## Build and Install
 
