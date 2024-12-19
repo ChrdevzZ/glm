@@ -1,4 +1,4 @@
-﻿#include "../simd/common.hpp"
+﻿#include "../simd/common.h"
 
 namespace glm
 {
