@@ -266,5 +266,7 @@
 #endif
 #endif//GLM_ENABLE_EXPERIMENTAL
 
+#ifdef GLM_ENABLE_ADDITIONAL_EXTENSIONS
 #include "./ext2/float_bits_cast.hpp"
 #include "./ext2/navie_reciprocal.hpp"
+#endif//GLM_ENABLE_ADDITIONAL_EXTENSIONS

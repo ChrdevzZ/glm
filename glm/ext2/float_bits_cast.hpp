@@ -19,7 +19,9 @@
 #include "../fwd.hpp"
 #include "../common.hpp"
 
-#if GLM_MESSAGES == GLM_ENABLE && !defined(GLM_EXT_INCLUDED)
+#ifndef GLM_ENABLE_ADDITIONAL_EXTENSIONS
+#	error "GLM: GLM_EXT2_float_bits_cast is an additional extension and may change in the future. Use #define GLM_ENABLE_ADDITIONAL_EXTENSIONS before including it, if you really want to use it."
+#elif GLM_MESSAGES == GLM_ENABLE && !defined(GLM_EXT_INCLUDED)
 #	pragma message("GLM: GLM_EXT2_float_bits_cast extension included")
 #endif
 

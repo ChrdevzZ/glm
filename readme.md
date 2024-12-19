@@ -101,7 +101,7 @@ target_link_libraries(main PRIVATE glm::glm)
 
 ## Additional extension in [this repository](https://github.com/ChrdevzZ/glm)
 
-- Additional extensions with the prefix name *GLM_EXT2_*. The added header files for the additional extensions are set into the glm/ext2/ directory. Note that <glm/ext.hpp> includes all of these additional extensions, and there is no need to define any more macros when including and using them.
+- Additional extensions with the prefix name *GLM_EXT2_*. The added header files for the additional extensions are set into the glm/ext2/ directory. Note that <glm/ext.hpp> includes all of these additional extensions, and you need to define a macro named `#GLM_ENABLE_ADDITIONAL_EXTENSIONS` when using them.
 
 ## Release notes
 
