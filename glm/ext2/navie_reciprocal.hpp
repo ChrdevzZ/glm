@@ -8,6 +8,8 @@
 ///
 /// Include <glm/ext2/navie_reciprocal.hpp> to use the features of this extension.
 ///
+/// @brief Returns the navie approximate reciprocal (inverse) of the argument.
+///
 /// @see ext_scalar_common
 /// @see ext_vector_common
 

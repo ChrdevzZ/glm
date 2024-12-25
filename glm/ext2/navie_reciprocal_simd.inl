@@ -1,7 +1,6 @@
 ﻿#include "../simd/common.h"
 
-namespace glm
-{
+namespace glm{
 namespace detail
 {
 #if GLM_ARCH & GLM_ARCH_SSE2_BIT

@@ -1,7 +1,6 @@
 ﻿/// @ref ext2_navie_reciprocal
 
-namespace glm
-{
+namespace glm{
 namespace detail
 {
     template<length_t L, typename T, qualifier Q, bool Aligned>

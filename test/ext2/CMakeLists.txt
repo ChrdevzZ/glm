@@ -1,2 +1,3 @@
+glmCreateTestGYC(ext2_minmax)
 glmCreateTestGTC(ext2_navie_reciprocal)
 glmCreateTestGTC(ext2_float_bits_cast)

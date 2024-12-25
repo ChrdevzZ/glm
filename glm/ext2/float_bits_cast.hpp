@@ -8,6 +8,10 @@
 ///
 /// Include <glm/ext2/float_bits_cast.hpp> to use the features of this extension.
 ///
+/// @brief Directly converting between storage of floating-point types and integer
+/// types without any arithmetic type conversion, which usually means the value is
+/// no longer valid after the conversion).
+///
 /// @see ext_scalar_common
 /// @see ext_vector_common
 
