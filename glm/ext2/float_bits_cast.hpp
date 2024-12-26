@@ -35,6 +35,87 @@ namespace glm
 	/// @{
 
 
+	/// Returns a signed integer value representing
+	/// the encoding of a floating-point value. The floating-point
+	/// value's bit-level representation is preserved.
+	///
+	/// Overload for double floating-point value type.
+	GLM_FUNC_DECL int64 floatBitsToInt(double v);
+
+	/// Returns a signed integer value representing
+	/// the encoding of a floating-point value. The floatingpoint
+	/// value's bit-level representation is preserved.
+	///
+	/// Overload for double floating-point value type.
+	///
+	/// @tparam L Integer between 1 and 4 included that qualify the dimension of the vector
+	/// @tparam Q Value from qualifier enum
+	template<length_t L, qualifier Q>
+	GLM_FUNC_DECL vec<L, int64, Q> floatBitsToInt(vec<L, double, Q> const& v);
+
+	/// Returns a unsigned integer value representing
+	/// the encoding of a floating-point value. The floatingpoint
+	/// value's bit-level representation is preserved.
+	///
+	/// Overload for double floating-point value type.
+	GLM_FUNC_DECL uint64 floatBitsToUint(double v);
+
+	/// Returns a unsigned integer value representing
+	/// the encoding of a floating-point value. The floatingpoint
+	/// value's bit-level representation is preserved.
+	///
+	/// Overload for double floating-point value type.
+	///
+	/// @tparam L Integer between 1 and 4 included that qualify the dimension of the vector
+	/// @tparam Q Value from qualifier enum
+	template<length_t L, qualifier Q>
+	GLM_FUNC_DECL vec<L, uint64, Q> floatBitsToUint(vec<L, double, Q> const& v);
+
+	/// Returns a floating-point value corresponding to a signed
+	/// integer encoding of a floating-point value.
+	/// If an inf or NaN is passed in, it will not signal, and the
+	/// resulting floating point value is unspecified. Otherwise,
+	/// the bit-level representation is preserved.
+	///
+	/// Overload for double floating-point value type.
+	GLM_FUNC_DECL double intBitsToFloat(int64 v);
+
+	/// Returns a floating-point value corresponding to a signed
+	/// integer encoding of a floating-point value.
+	/// If an inf or NaN is passed in, it will not signal, and the
+	/// resulting floating point value is unspecified. Otherwise,
+	/// the bit-level representation is preserved.
+	///
+	/// Overload for double floating-point value type.
+	///
+	/// @tparam L Integer between 1 and 4 included that qualify the dimension of the vector
+	/// @tparam Q Value from qualifier enum
+	template<length_t L, qualifier Q>
+	GLM_FUNC_DECL vec<L, double, Q> intBitsToFloat(vec<L, int64, Q> const& v);
+
+	/// Returns a floating-point value corresponding to a
+	/// unsigned integer encoding of a floating-point value.
+	/// If an inf or NaN is passed in, it will not signal, and the
+	/// resulting floating point value is unspecified. Otherwise,
+	/// the bit-level representation is preserved.
+	///
+	/// Overload for double floating-point value type.
+	GLM_FUNC_DECL double uintBitsToFloat(uint64 v);
+
+	/// Returns a floating-point value corresponding to a
+	/// unsigned integer encoding of a floating-point value.
+	/// If an inf or NaN is passed in, it will not signal, and the
+	/// resulting floating point value is unspecified. Otherwise,
+	/// the bit-level representation is preserved.
+	///
+	/// Overload for double floating-point value type.
+	///
+	/// @tparam L Integer between 1 and 4 included that qualify the dimension of the vector
+	/// @tparam Q Value from qualifier enum
+	template<length_t L, qualifier Q>
+	GLM_FUNC_DECL vec<L, double, Q> uintBitsToFloat(vec<L, uint64, Q> const& v);
+
+
 	/// Returns a unsigned integer value representing
 	/// the encoding of a floating-point value. The floatingpoint
 	/// value's bit-level representation is preserved. (32-bit)
