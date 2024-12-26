@@ -37,10 +37,10 @@
 
 namespace glm
 {
-    /// @addtogroup ext2_minmax
-    /// @{
+	/// @addtogroup ext2_minmax
+	/// @{
 
-    
+	
 	/// Returns (y, x) pair if y < x; otherwise, it returns (x, y).
 	///
 	/// @tparam genType Floating-point or integer; scalar or vector types.
@@ -100,7 +100,7 @@ namespace glm
 	GLM_FUNC_DECL GLM_CONSTEXPR std::pair<vec<L, T, Q>, vec<L, T, Q>> minmax(vec<L, T, Q> const& a, vec<L, T, Q> const& b, vec<L, T, Q> const& c, vec<L, T, Q> const& d);
 
 
-    /// @}
+	/// @}
 }//namespace glm
 
 

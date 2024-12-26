@@ -32,13 +32,13 @@ namespace glm
 	/// @addtogroup ext2_navie_reciprocal
 	/// @{
 
-    /// Reciprocal function that may be faster than the common one
-    /// but less accurate.
-    /// 
-    /// It is almost equivalent to using division directly.
-    ///
-    template <typename genType>
-    GLM_FUNC_DECL genType reciprocal(genType x);
+	/// Reciprocal function that may be faster than the common one
+	/// but less accurate.
+	/// 
+	/// It is almost equivalent to using division directly.
+	///
+	template <typename genType>
+	GLM_FUNC_DECL genType reciprocal(genType x);
 
 	/// @}
 }//namespace glm
