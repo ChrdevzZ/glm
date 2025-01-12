@@ -89,7 +89,8 @@ namespace glm
 		return (uint)__float_as_uint(v);
 
 #elif defined(__INTEL_COMPILER) || defined(__INTEL_LLVM_COMPILER) || \
-	  defined(_MSC_VER) && (_MSC_VER >= 1932) && (defined(_M_IX86) || defined(_M_X64))
+	  (defined(_MSC_VER) && (_MSC_VER >= 1932) || defined(__clang__) && (__clang_major__ >= 10)) && \
+	  (defined(_M_IX86) || defined(_M_X64))
 	
 		return (uint)_castf32_u32(v);
 
@@ -117,7 +118,8 @@ namespace glm
 		return (uint64)__double_as_longlong(v);
 
 #elif defined(__INTEL_COMPILER) || defined(__INTEL_LLVM_COMPILER) || \
-	  defined(_MSC_VER) && (_MSC_VER >= 1932) && (defined(_M_IX86) || defined(_M_X64))
+	  (defined(_MSC_VER) && (_MSC_VER >= 1932) || defined(__clang__) && (__clang_major__ >= 10)) && \
+	  (defined(_M_IX86) || defined(_M_X64))
 	
 		return (uint64)_castf64_u64(v);
 
@@ -158,7 +160,8 @@ namespace glm
 		return __uint_as_float((unsigned int)v);
 
 #elif defined(__INTEL_COMPILER) || defined(__INTEL_LLVM_COMPILER) || \
-	  defined(_MSC_VER) && (_MSC_VER >= 1932) && (defined(_M_IX86) || defined(_M_X64))
+	  (defined(_MSC_VER) && (_MSC_VER >= 1932) || defined(__clang__) && (__clang_major__ >= 10)) && \
+	  (defined(_M_IX86) || defined(_M_X64))
 	
 		return _castu32_f32((unsigned __int32)v);
 
@@ -186,7 +189,8 @@ namespace glm
 		return __longlong_as_double((long long)v);
 
 #elif defined(__INTEL_COMPILER) || defined(__INTEL_LLVM_COMPILER) || \
-	  defined(_MSC_VER) && (_MSC_VER >= 1932) && (defined(_M_IX86) || defined(_M_X64))
+	  (defined(_MSC_VER) && (_MSC_VER >= 1932) || defined(__clang__) && (__clang_major__ >= 10)) && \
+	  (defined(_M_IX86) || defined(_M_X64))
 	
 		return _castu64_f64((unsigned __int64)v);
 
