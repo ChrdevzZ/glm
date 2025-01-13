@@ -1,5 +1,9 @@
 ﻿/// @ref ext2_float_bits_cast
 
+#if (GLM_ARCH & GLM_ARCH_X86) && defined(__clang__) && (__clang_major__ >= 10)
+#   include <x86intrin.h>
+#endif
+
 namespace glm
 {
 	// Overload the GLM common functions (floatBitsToInt, floatBitsToUint, intBitsToFloat,
