@@ -171,7 +171,7 @@ namespace glm
 
 #elif defined(_MSC_VER) && !defined(__clang__) && (defined(_M_ARM) || defined(_M_ARM64))
 
-		return _CopyFloatFromInt32((__int32)w);
+		return _CopyFloatFromInt32((__int32)v);
 
 #else
 
