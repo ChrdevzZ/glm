@@ -1,7 +1,6 @@
 #ifndef GLM_FORCE_INTRINSICS
 #	define GLM_FORCE_INTRINSICS
 #endif//GLM_FORCE_INTRINSICS
-//#define GLM_FORCE_DEFAULT_ALIGNED_GENTYPES
 #define GLM_FORCE_SWIZZLE
 #include <glm/ext/scalar_constants.hpp>
 #include <glm/ext/vector_relational.hpp>

@@ -103,14 +103,14 @@ target_link_libraries(main PRIVATE glm::glm)
 
 - The [additional extensions](https://github.com/ChrdevzZ/glm/tree/master/glm/ext2) have the prefix name *GLM_EXT2_* in the `glm/ext2/`. The added header files for the additional extensions are set into the glm/ext2/ directory. Note that <glm/ext.hpp> includes all of these additional extensions, and you need to define a macro named `GLM_ENABLE_ADDITIONAL_EXTENSIONS` when using them.
 
-## Release notes
-
-### [GLM 1.0.2](https://github.com/ChrdevzZ/glm/tree/master) - 2024-XX-XX
-
-#### Features ([Addition Extensions](#EXT2)):
+### Features ([Addition Extensions](#EXT2)):
 - Added *GLM_EXT2_minmax* with tests (TODO)
 - Added *GLM_EXT2_navie_reciprocal* with tests (TODO)
 - Added *GLM_EXT2_float_bits_cast* with tests (TODO)
+
+## Release notes
+
+### [GLM 1.0.2](https://github.com/g-truc/glm/tree/master) - 2025-0X-XX
 
 #### Improvements:
 - Unit tests are not build by default, `GLM_BUILD_TESTS` set to `ON` required.
