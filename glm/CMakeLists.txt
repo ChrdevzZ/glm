@@ -21,6 +21,10 @@ file(GLOB_RECURSE GTX_SOURCE ./gtx/*.cpp)
 file(GLOB_RECURSE GTX_INLINE ./gtx/*.inl)
 file(GLOB_RECURSE GTX_HEADER ./gtx/*.hpp)
 
+file(GLOB_RECURSE EXT2_SOURCE ./ext2/*.cpp)
+file(GLOB_RECURSE EXT2_INLINE ./ext2/*.inl)
+file(GLOB_RECURSE EXT2_HEADER ./ext2/*.hpp)
+
 file(GLOB_RECURSE SIMD_SOURCE ./simd/*.cpp)
 file(GLOB_RECURSE SIMD_INLINE ./simd/*.inl)
 file(GLOB_RECURSE SIMD_HEADER ./simd/*.h)
@@ -41,6 +45,9 @@ source_group("GTX Files" FILES ${GTX_HEADER})
 source_group("SIMD Files" FILES ${SIMD_SOURCE})
 source_group("SIMD Files" FILES ${SIMD_INLINE})
 source_group("SIMD Files" FILES ${SIMD_HEADER})
+source_group("EXT2 Files" FILES ${EXT2_SOURCE})
+source_group("EXT2 Files" FILES ${EXT2_INLINE})
+source_group("EXT2 Files" FILES ${EXT2_HEADER})
 
 add_library(glm-header-only INTERFACE)
 add_library(glm::glm-header-only ALIAS glm-header-only)
@@ -59,6 +66,7 @@ if (GLM_BUILD_LIBRARY)
 		${GTC_SOURCE}     ${GTC_INLINE}     ${GTC_HEADER}
 		${GTX_SOURCE}     ${GTX_INLINE}     ${GTX_HEADER}
 		${SIMD_SOURCE}    ${SIMD_INLINE}    ${SIMD_HEADER}
+		${EXT2_SOURCE}    ${EXT2_INLINE}    ${EXT2_HEADER}
 	)
 	add_library(glm::glm ALIAS glm)
 	target_link_libraries(glm PUBLIC glm-header-only)
