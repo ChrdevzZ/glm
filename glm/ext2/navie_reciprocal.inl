@@ -17,8 +17,8 @@ namespace detail
 	template<typename genType>
 	GLM_FUNC_QUALIFIER genType reciprocal(genType x)
 	{
-		GLM_STATIC_ASSERT( std::numeric_limits<genType>::is_iec559 || GLM_CONFIG_UNRESTRICTED_FLOAT, 
-						   "'reciprocal' only accept floating-point input" );
+		static_assert( std::numeric_limits<genType>::is_iec559 || GLM_CONFIG_UNRESTRICTED_FLOAT, 
+					   "'reciprocal' only accept floating-point input" );
 	
 		return genType(1) / x;
 	}
@@ -26,8 +26,8 @@ namespace detail
 	template<length_t L, typename T, qualifier Q>
 	GLM_FUNC_QUALIFIER vec<L, T, Q> reciprocal(vec<L, T, Q> const& x)
 	{
-		GLM_STATIC_ASSERT( std::numeric_limits<T>::is_iec559 || GLM_CONFIG_UNRESTRICTED_FLOAT, 
-						   "'reciprocal' only accept floating-point inputs" );
+		static_assert( std::numeric_limits<T>::is_iec559 || GLM_CONFIG_UNRESTRICTED_FLOAT, 
+					   "'reciprocal' only accept floating-point inputs" );
 	
 		return detail::compute_reciprocal<L, T, Q, detail::is_aligned<Q>::value>::call(x);
 	}
