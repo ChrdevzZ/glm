@@ -34,7 +34,7 @@ namespace glm
 		GLM_FUNC_QUALIFIER GLM_CONSTEXPR std::pair<genType, genType> minmax(genType x, genType y)
 		{
 			static_assert(std::numeric_limits<genType>::is_iec559 || GLM_CONFIG_UNRESTRICTED_FLOAT || std::numeric_limits<genType>::is_integer, "'minmax' only accept floating-point or integer inputs");
-			return (y < x) ? std::make_pair<genType, genType>(y, x) : std::make_pair<genType, genType>(x, y);
+			return (y < x) ? std::pair<genType, genType>(y, x) : std::pair<genType, genType>(x, y);
 		}
 		
 		template<typename genType>
@@ -43,7 +43,7 @@ namespace glm
 			static_assert(std::numeric_limits<genType>::is_iec559 || GLM_CONFIG_UNRESTRICTED_FLOAT || std::numeric_limits<genType>::is_integer, "'minmax' only accept floating-point or integer inputs");
 			genType Valmin, Valmax;
 			std::tie(Valmin, Valmax) = glm::minmax(x, y);
-			return std::make_pair<genType, genType>(glm::min(Valmin, z), glm::max(Valmax, z));
+			return std::pair<genType, genType>(glm::min(Valmin, z), glm::max(Valmax, z));
 		}
 		
 		template<typename genType>
@@ -53,7 +53,7 @@ namespace glm
 			genType Valmin0, Valmin1, Valmax0, Valmax1;
 			std::tie(Valmin0, Valmax0) = glm::minmax(x, y);
 			std::tie(Valmin1, Valmax1) = glm::minmax(z, w);
-			return std::make_pair<genType, genType>(glm::min(Valmin0, Valmin1), glm::max(Valmax0, Valmax1));
+			return std::pair<genType, genType>(glm::min(Valmin0, Valmin1), glm::max(Valmax0, Valmax1));
 		}
 #   endif
 
