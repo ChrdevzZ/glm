@@ -16,26 +16,26 @@ namespace detail
 			return Result;
 		}
 	};
-	
+
 	template<>
 	struct compute_reciprocal<2, float, aligned_lowp, true>
 	{
 		GLM_FUNC_QUALIFIER static vec<2, float, aligned_lowp> call(vec<2, float, aligned_lowp> const& v)
 		{
-			auto Tmp = vec<4, float, aligned_lowp>(v.xyyy);
+			vec<4, float, aligned_lowp> Tmp(v.x, v.y, v.y, v.y);
 			Tmp.data = glm_vec4_rcp_lowp(Tmp.data);
-			return Tmp.xy;
+			return vec<2, float, aligned_lowp>(Tmp.x, Tmp.y);
 		}
 	};
-	
+
 	template<>
 	struct compute_reciprocal<1, float, aligned_lowp, true>
 	{
 		GLM_FUNC_QUALIFIER static vec<1, float, aligned_lowp> call(vec<1, float, aligned_lowp> const& v)
 		{
-			vec<4, float, aligned_lowp> Tmp(v);
+			vec<4, float, aligned_lowp> Tmp(v.x);
 			Tmp.data = glm_vec1_rcp_lowp(Tmp.data);
-			return Tmp;
+			return vec<1, float, aligned_lowp>(Tmp.x);
 		}
 	};
 
