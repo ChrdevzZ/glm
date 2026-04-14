@@ -45,6 +45,10 @@ namespace detail
 		GLM_FUNC_QUALIFIER vec<4, T, Q> operator ()()  const { return vec<4, T, Q>(this->elem(E0), this->elem(E1), this->elem(E2), this->elem(E3)); }
 	};
 
+#if GLM_ARCH & GLM_ARCH_SSE2_BIT
+#	include "_swizzle_simd.inl"
+#endif
+
 	// Internal class for implementing swizzle operators
 	/*
 		Template parameters:
